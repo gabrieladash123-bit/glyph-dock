@@ -1,2 +1,3 @@
 fixtures/confusables.txt -text -diff
 fixtures/UNICODE-LICENSE.txt -text
+*.py text eol=lf

@@ -1,0 +1,17 @@
+{
+  "source_sha256": "bf4037f60c0b2f425d8fecf7b8a68a55f883678c70f658ed48277f57676246d6",
+  "hashes": {
+    "deploy": "0x956cc1b6fdeeecea4e6655815e636fd6ab80867ca6b6a5c3f712a395887973c4",
+    "claim-scope": "0x8378049d48174b0116b624e1148992c75cf876aa0d65e35ce8a0ff1869d330cd",
+    "block-cyrillic-alias": "0xb8dabdfcc1240bea881ca9773c3239e14092ca74b7a298736ef7c4eaab74a944",
+    "transfer-scope": "0xc2776d000971600a5443b574d95f487672eb0caf31f91ed16e6842018d3dff36",
+    "block-former-owner": "0x121bff01923b08f2876ed7e980f6d6e636c2ac74feef946b1741f5ad02db08fb",
+    "block-stale-epoch": "0x0237f947d3a19c1a34cbba6a6b7e004083b0d6a975261bb13c472d372fea3cf9",
+    "release-scope": "0xd9f290ee1954bf2f1597a6ca86c261ab07b2482e0138da4ed9320eeb2a270f54",
+    "reclaim-cyrillic": "0xb50ff57020461e16b8d432b38a0d5ed10466fb72421727574fd8170a840ca180",
+    "claim-m": "0xcfe2172323f9b6073e92e5543ba6bbd611199f24e34d28cdbaf7333e96dee066",
+    "block-rn": "0x5ba39ef93e457bb8ac5cdfb7a7a974f336c610ddf4365a277385264f8bc25a3a",
+    "block-invisible": "0xe1e904673e3d6bb15d41cf42a3bdc6a74daa3afc9155729e5cb301d038a21c3e",
+    "block-wrong-spelling": "0x40778b4a04ef2051487c5b3af06ca2c41d331cc1234b7acc41212f0ce6c58950"
+  }
+}
