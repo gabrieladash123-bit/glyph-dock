@@ -146,3 +146,23 @@ def test_every_supported_character_matches_independent_unicode_oracle(direct_vm,
         right = alphabet[(index * 31 + 7) % len(alphabet)]
         expected = normalize('NFD', table.get(left, left) + table.get(right, right))
         assert contract.resolve(left + right)['skeleton'] == expected
+
+
+def test_native_address_calldata_transfer(direct_vm, direct_deploy, direct_alice, direct_bob, monkeypatch):
+    from gltest.direct import loader
+    original = loader._calldata_roundtrip_args
+
+    def typed(args, kwargs):
+        args, kwargs = original(args, kwargs)
+        if len(args) == 3:
+            from genlayer import Address
+            args = (*args[:2], Address(args[2]))
+        return args, kwargs
+
+    contract = deploy(direct_vm, direct_deploy)
+    direct_vm.sender = direct_alice
+    contract.claim('scope')
+    monkeypatch.setattr(loader, '_calldata_roundtrip_args', typed)
+    contract.transfer('scope', 1, direct_bob)
+    assert contract.resolve('scope')['owner'].lower() == address(direct_bob)
+    assert contract.resolve('scope')['epoch'] == 2

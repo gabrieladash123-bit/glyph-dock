@@ -24,6 +24,7 @@ jobs:
           node --test tests/rpc-preflight.test.cjs
       - run: node scripts/bootstrap-ci.cjs
       - run: node scripts/prove.cjs
+      - run: node scripts/verify-proofs.cjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:

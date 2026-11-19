@@ -31,6 +31,6 @@ npm ci
 node --test tests/rpc-preflight.test.cjs
 ```
 
-The direct tests exercise the real contract, replay validators against altered and missing mappings, test source tampering, compare every supported character against the upstream file, and check collision, ownership, release, reclaim and stale-epoch behavior. The live CLI proof uses two encrypted disposable wallets and checks the imported table plus every tracked reservation after each successful and rejected call.
+The direct tests exercise the real contract, replay validators against altered and missing mappings, test source tampering, compare every supported character against the upstream file, and check collision, ownership, release, reclaim and stale-epoch behavior. Transfer is tested with native SDK Address calldata as well as direct-test byte fixtures. The live CLI proof uses two encrypted disposable wallets and checks the imported table plus every tracked reservation after each successful and rejected call.
 
 The Unicode fixture is redistributed with its [Unicode License v3](fixtures/UNICODE-LICENSE.txt). The contract and namespace mechanism are implemented here. Generic CLI transport is reused under MIT. [Unicode confusable detection](https://www.unicode.org/reports/tr39/#Confusable_Detection) describes the mapping approach.

@@ -140,7 +140,8 @@ class GlyphDock(gl.Contract):
     @gl.public.write
     def transfer(self, label: str, epoch: int, recipient: Address) -> None:
         record = self._controlled(label, epoch)
-        recipient = Address(recipient)
+        if not isinstance(recipient, Address):
+            recipient = Address(recipient)
         if recipient == ZERO or str(recipient) == record['owner']:
             fail('Invalid recipient')
         skeleton = record['skeleton']
