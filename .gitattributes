@@ -1,0 +1,2 @@
+fixtures/confusables.txt -text -diff
+fixtures/UNICODE-LICENSE.txt -text
